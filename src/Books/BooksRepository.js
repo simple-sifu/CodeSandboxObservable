@@ -12,6 +12,7 @@ class BooksRepository {
   }
 
   getBooks = (pmCallback) => {
+    console.log("**** BooksRepository.getBooks() ****");
     this.programmersModel.subscribe(pmCallback);
     this.loadApiData();
     this.programmersModel.notify();

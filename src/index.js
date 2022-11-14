@@ -22,7 +22,7 @@ function App() {
       {vm.map((bookVm, i) => {
         return <div key={i}>{bookVm.name}</div>;
       })}
-      <button
+      {/* <button
         onClick={() => {
           new BooksPresenter().addBook({
             name: "BFTDD",
@@ -31,7 +31,7 @@ function App() {
         }}
       >
         add book
-      </button>
+      </button> */}
     </div>
   );
 }
