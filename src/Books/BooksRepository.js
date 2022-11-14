@@ -10,8 +10,8 @@ class BooksRepository {
     this.httpGateway = new HttpGateway();
   }
 
-  getBooks = (setPMCallback) => {
-    this.programmersModel.subscribe(setPMCallback);
+  getBooks = (pmCallback) => {
+    this.programmersModel.subscribe(pmCallback);
     this.loadApiData();
     this.programmersModel.notify();
   };
