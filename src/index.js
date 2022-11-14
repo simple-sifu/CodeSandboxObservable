@@ -22,6 +22,16 @@ function App() {
       {vm.map((bookVm, i) => {
         return <div key={i}>{bookVm.name}</div>;
       })}
+      {/* <button
+        onClick={() => {
+          new BooksPresenter().addBook({
+            name: "BFTDD",
+            author: "Peter Heard",
+          });
+        }}
+      >
+        add book
+      </button> */}
     </div>
   );
 }
