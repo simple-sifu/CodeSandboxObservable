@@ -1,6 +1,6 @@
-export default class Observer {
+export default class Observable {
   _value = null;
-  observers = [];
+  observables = [];
 
   constructor(initialValue) {
     this._value = initialValue;
@@ -15,12 +15,12 @@ export default class Observer {
   }
 
   subscribe = (subscribeCallback) => {
-    this.observers.push(subscribeCallback);
+    this.observables.push(subscribeCallback);
   };
 
   notify = () => {
-    this.observers.map((observer) => {
-      observer(this._value);
+    this.observables.map((observable) => {
+      observable(this._value);
     });
   };
 }

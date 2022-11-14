@@ -9,4 +9,8 @@ export default class BooksPresenter {
       vmCallback(booksVm);
     });
   };
+
+  addBook = async (requestDto) => {
+    booksRepository.addBook(requestDto);
+  };
 }
